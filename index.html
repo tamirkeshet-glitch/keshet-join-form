@@ -1,11 +1,145 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>טופס הצטרפות JOIN - קשת יזמות עסקית / סונול</title>
-</head>
-<body>
-<p>use vercel</p>
-</body>
-</html>
+<!DOCTYPE html><html lang=he dir=rtl><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>טופס הצטרפות JOIN</title>
+<style>
+:root{--p:#e30613;--i:#1a2530;--m:#5b6570;--b:#f4f6f9;--f:rgba(227,6,19,.18)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Segoe UI,Tahoma,Arial,sans-serif;background:var(--b);color:var(--i);padding:20px 12px 40px}
+.w{max-width:760px;margin:0 auto}.br{display:flex;gap:8px;justify-content:center;margin-bottom:12px}
+.ls{background:var(--p);color:#fff;font-weight:800;padding:6px 12px;border-radius:6px}.lk{background:var(--i);color:#fff;font-weight:700;padding:6px 12px;border-radius:6px;font-size:.85rem}
+.c{background:#fff;border-radius:14px;box-shadow:0 10px 28px rgba(26,37,48,.08);overflow:hidden;border-top:6px solid var(--p)}
+.h{padding:22px 20px 12px;text-align:center;border-bottom:1px solid #eee}.h h1{font-size:1.4rem;margin-bottom:6px}.h p{color:var(--m);font-size:.92rem;line-height:1.45}
+.st{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:12px 12px 0}.sd{font-size:.72rem;padding:5px 9px;border-radius:99px;background:#eef1f5;color:var(--m);font-weight:600}.sd.a{background:var(--p);color:#fff}.sd.d{background:var(--i);color:#fff}
+.bd{padding:18px}.pn{display:none}.pn.a{display:block}
+.t{font-size:1.02rem;margin:4px 0 12px;padding-bottom:6px;border-bottom:1px dashed #e4e8ee}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.g{grid-template-columns:1fr}}.s2{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:5px}.rq{color:var(--p)}
+input,select{width:100%;padding:10px 11px;border:1px solid #ccd3db;border-radius:7px;font-size:1rem;font-family:inherit}
+input:focus,select:focus{border-color:var(--p);box-shadow:0 0 0 3px var(--f);outline:none}
+.cr{display:flex;flex-wrap:wrap;gap:8px}.ch{border:1px solid #ccd3db;border-radius:8px;padding:8px 12px;cursor:pointer;background:#fff}.ch:has(input:checked){border-color:var(--p);background:#fff5f5}
+.cb{border:1px solid #e4e8ee;border-radius:10px;padding:12px;margin-bottom:10px;background:#fafbfc}.cb h3{font-size:.95rem;margin-bottom:10px}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.pg{grid-template-columns:1fr}}
+.pk{display:block;border:1px solid #ccd3db;border-radius:12px;padding:16px 14px;cursor:pointer;background:#fff;min-height:88px}
+.pk input{margin-left:8px;transform:scale(1.15)}.pk strong{display:block;margin-bottom:4px}.pk span{color:var(--m);font-size:.85rem;font-weight:400}
+.pk:has(input:checked){border-color:var(--p);background:#fff5f5;box-shadow:0 0 0 3px var(--f)}
+.ac{display:flex;gap:8px;margin-top:16px}button{border:none;border-radius:8px;padding:12px 14px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.bp{flex:1;background:var(--p);color:#fff}.bg{flex:1;background:#eef1f5}.ba{background:var(--i);color:#fff}
+.ok{display:none;text-align:center;padding:48px 20px}.ok h2{color:#2e7d32;margin-bottom:8px}.er{color:var(--p);font-size:.85rem;margin-top:6px;display:none}.mu{color:var(--m);font-size:.88rem}.sm{background:#f7f8fa;border-radius:10px;padding:12px;line-height:1.7}
+</style></head><body>
+<div class=w><div class=br><div class=ls>SONOL</div><div class=lk>קשת יזמות עסקית</div></div>
+<div class=c id=app>
+<div class=h><h1>טופס הצטרפות JOIN</h1><p>אחרי פרטי העסק בוחרים מה להזמין. עוברים רק למסכים שנבחרו. אפשר גם להצטרף בלי כרטיסים.</p></div>
+<div class=st id=steps></div>
+<div class=bd id=wizard>
+<section class="pn a" data-p=company><h2 class=t>פרטי העסק</h2><div class=g>
+<div class=s2><label>שם החברה / העוסק / הלקוח <span class=rq>*</span></label><input id=company required></div>
+<div><label>ח.פ / ע.מ / ת.ז <span class=rq>*</span></label><input id=hp required></div>
+<div><label>טלפון <span class=rq>*</span></label><input id=phone type=tel required></div>
+<div class=s2><label>כתובת מלאה <span class=rq>*</span></label><input id=address required></div>
+<div><label>דוא״ל לחשבוניות והסכם <span class=rq>*</span></label><input id=email type=email required></div>
+<div><label>טלפון סלולרי / איש קשר</label><input id=mobile type=tel></div>
+<div class=s2><label>פקס</label><input id=fax type=tel></div></div></section>
+<section class=pn data-p=signers><h2 class=t>מורשי חתימה</h2><div class=g>
+<div><label>שם מורשה 1 <span class=rq>*</span></label><input id=sig1_name required></div>
+<div><label>ת.ז מורשה 1 <span class=rq>*</span></label><input id=sig1_id required></div>
+<div class=s2><label>כתובת מורשה 1 <span class=rq>*</span></label><input id=sig1_addr required></div>
+<div><label>שם מורשה 2</label><input id=sig2_name></div>
+<div><label>ת.ז מורשה 2</label><input id=sig2_id></div>
+<div class=s2><label>כתובת מורשה 2</label><input id=sig2_addr></div></div></section>
+<section class=pn data-p=choose><h2 class=t>מה מזמינים?</h2>
+<p class=mu style=margin-bottom:14px>סמנו סוג אחד או יותר. אם אין צורך בכרטיסים עכשיו — המשיכו בלי סימון.</p>
+<div class=pg>
+<label class=pk><input type=checkbox name=order_type value=vehicle><strong>דלקן / כרטיס רכב</strong><span>עד 10 רכבים, סוג דלק, הגבלות ושטיפומט</span></label>
+<label class=pk><input type=checkbox name=order_type value=driver><strong>כרטיס נהג</strong><span>עד 2 כרטיסים לפי שם וזהות הנהג</span></label>
+<label class=pk><input type=checkbox name=order_type value=master><strong>כרטיס מאסטר</strong><span>כמות והגבלת ליטרים</span></label>
+<label class=pk><input type=checkbox name=order_type value=sono><strong>סונוקאש</strong><span>כרטיסים בערך 100–1,000 ₪</span></label>
+</div></section>
+<section class=pn data-p=vehicle><h2 class=t>דלקן / כרטיס רכב</h2><div id=vehiclesList></div><button type=button class=ba id=addVehicle>+ הוסף רכב / דלקן</button></section>
+<section class=pn data-p=driver><h2 class=t>כרטיס נהג</h2><div id=driversList></div><button type=button class=ba id=addDriver>+ הוסף כרטיס נהג</button></section>
+<section class=pn data-p=master><h2 class=t>כרטיס מאסטר</h2><div class=g>
+<div><label>כמות כרטיסים <span class=rq>*</span></label><input id=master_qty type=number min=1></div>
+<div><label>הגבלה ליום</label><input id=master_day></div>
+<div><label>הגבלה לחודש</label><input id=master_month></div></div></section>
+<section class=pn data-p=sono><h2 class=t>סונוקאש</h2>
+<label>סוג דלק <span class=rq>*</span></label>
+<div class=cr><label class=ch><input type=radio name=sono_fuel value=בנזין> בנזין</label><label class=ch><input type=radio name=sono_fuel value=סולר> סולר</label></div>
+<div class=g style=margin-top:10px>
+<div><label>כמות 100₪</label><input id=sono_100 type=number min=0></div>
+<div><label>כמות 150₪</label><input id=sono_150 type=number min=0></div>
+<div><label>כמות 200₪</label><input id=sono_200 type=number min=0></div>
+<div><label>כמות 250₪</label><input id=sono_250 type=number min=0></div>
+<div><label>כמות 500₪</label><input id=sono_500 type=number min=0></div>
+<div><label>כמות 1000₪</label><input id=sono_1000 type=number min=0></div></div></section>
+<section class=pn data-p=summary><h2 class=t>סיכום ושליחה</h2><div class=sm id=summary></div></section>
+<p class=er id=formError>יש למלא את שדות החובה</p>
+<div class=ac><button type=button class=bg id=prevBtn>חזרה</button><button type=button class=bp id=nextBtn>המשך</button></div>
+</div>
+<div class=ok id=successMessage><h2>הטופס נשלח בהצלחה!</h2><p>נציג קשת / סונול יצור קשר בהקדם.</p></div>
+</div></div>
+<form id=gform action="https://docs.google.com/forms/d/e/1FAIpQLSep6G4wSJTiqPhhO_mb1MbIaSRab6pRVWSM6cc5ibZihGDg-w/formResponse" method=POST target=hidden_iframe style=display:none></form>
+<iframe name=hidden_iframe id=hidden_iframe style=display:none></iframe>
+<script>
+const LB={company:"עסק",signers:"מורשים",choose:"מה מזמינים",vehicle:"דלקן",driver:"נהג",master:"מאסטר",sono:"סונוקאש",summary:"שליחה"};
+const PP=["vehicle","driver","master","sono"];
+const AMT=["כרטיס רכב","דלקן א'","דלקן ב (רושם ק\"מ)","דלקן אוריאה","כרטיס אוריאה"];
+const FU=["בנזין 95","בנזין 98","גולדיזל (סולר)","אוריאה"];
+const FA=["ALL - כללי","בנזין 95","בנזין 98","גולדיזל (סולר)","אוריאה"];
+const VT=["פרטי","מסחרי","משאית","אוטובוס","אופנוע","אחר"];
+const SH=["לא","כן - שטיפה אחת בחודש","כן - שתי שטיפות בחודש","כן - שלוש שטיפות בחודש","כן - ארבע שטיפות בחודש","כן - חמש שטיפות בחודש"];
+const VE=[["1580485406","538323028","1639430919","399194721","1801322680","1988205433","1938959152","1063717410","990349537","1816536534","1823332518","920934177","462933649"],["2131626653","1474168165","2096845939","2094519447","747310404","1372170829","831371325","1078518964","986348745","19360187","1043781660","997884181","1821335551"],["659981857","818948478","38740420","199219456","30542701","1048227933","251510949","1292976748","1728352211","324386157","221936905","776487717","566695883"],["1652508122","1696973425","531759007","906231832","270377113","13865827","1015112596","988404534","1319346100","43502605","1404778701","1175636852","62388615"],["555293904","1410004765","1257263802","930059628","1418684276","402217237","1715791502","9564290","16134626","327922824","1160432352","1015114096","1658796675"],["526718533","90399837","566781705","1578480297","603761263","1396611079","1609088023","1534206719","17666540","1203513797","1584648199","2049410364","280587430"],["320388224","231004719","1303228428","1172138214","211805330","282339441","564655701","1620798568","1243273279","1709360950","426543997","2106666813","2038502422"],["1958381442","930717501","1552623517","183168758","888639823","991045810","1004884910","396351367","1813875303","268672230","1744052012","149564486","580574214"],["663768712","1311331410","1072909684","1023424547","851580578","1491805036","1757642857","1501345951","189682929","1315849882","1729859208","531910271","105659422"],["484024341","248908686","1601788373","1658850375","231926921","1858578940","588369108","1122495764","335551359","935465450","2077954565","582649178",null]];
+const E={company:"674780775",hp:"1464393871",address:"769353995",email:"1365412492",phone:"1141649068",mobile:"72281329",fax:"1461622088",sig1_name:"75492597",sig1_id:"961577127",sig1_addr:"1273925507",sig2_name:"1727326492",sig2_id:"1012050798",sig2_addr:"386000391",want_vehicle:"1880335478",want_driver:"2128856327",want_master:"1464371636",want_sono:"1692488098",drivers:[{name:"1851721080",id:"1984242985",fuel:"1747066044",day:"1192709071",month:"1952851146",more:"1918877952"},{name:"1436112597",id:"272481018",fuel:"1262477293",day:"1345883141",month:"98496375"}],master_qty:"838942313",master_day:"1837868109",master_month:"1708612737",sono_fuel:"1470846120",sono_denoms:["1166725204","1663232263","1340444098","1672746791","467015501","1349931179"]};
+let path=["company","signers","choose"],step=0,submitted=false,vn=0,dn=0;
+const $=s=>document.querySelector(s); const val=id=>(document.getElementById(id)||{}).value?.trim()||"";
+const radio=n=>{const e=document.querySelector(`input[name="${n}"]:checked`);return e?e.value:""};
+const field=n=>{const e=document.querySelector(`[name="${n}"]`);return e?e.value.trim():""};
+const selected=()=>[...document.querySelectorAll("input[name=order_type]:checked")].map(e=>e.value);
+const wants=t=>selected().includes(t); const cur=()=>path[step];
+function rebuild(){path=["company","signers","choose",...selected().filter(t=>PP.includes(t)),"summary"];if(step>=path.length)step=path.length-1;}
+function render(){$("#steps").innerHTML=path.map((k,i)=>`<span class="sd ${i===step?'a':i<step?'d':''}">${i+1}. ${LB[k]}</span>`).join("");
+document.querySelectorAll(".pn").forEach(p=>p.classList.toggle("a",p.dataset.p===cur()));
+$("#prevBtn").style.visibility=step===0?"hidden":"visible";
+$("#nextBtn").textContent=cur()==="summary"?"שליחת טופס הצטרפות":"המשך";}
+function sel(n,o){return `<select name="${n}"><option value="">בחירה</option>${o.map(x=>`<option value="${x}">${x}</option>`).join("")}</select>`}
+function lab(t,r){return `<label>${t}${r?' <span class=rq>*</span>':''}</label>`}
+function addV(){if(vn>=10)return;const i=vn++;const w=document.createElement("div");w.className="cb";w.innerHTML=`<h3>רכב / דלקן ${i+1}</h3><div class=g>
+<div>${lab("סוג אמצעי תדלוק",1)}${sel("v_amtsei_"+i,AMT)}</div>
+<div>${lab("מס׳ רכב",1)}<input name=v_plate_${i}></div>
+<div>${lab("טלפון נהג")}<input name=v_phone_${i} type=tel></div>
+<div>${lab("סוג דלק",1)}${sel("v_fuel_"+i,FU)}</div>
+<div>${lab("סוג הרכב",1)}${sel("v_type_"+i,VT)}</div>
+<div>${lab("הגבלה ליום")}<input name=v_day_${i}></div>
+<div>${lab("הגבלה לחודש")}<input name=v_month_${i}></div>
+<div>${lab("דגם")}<input name=v_model_${i}></div>
+<div>${lab("שנת יצור")}<input name=v_year_${i}></div>
+<div>${lab("שם נהג")}<input name=v_driver_${i}></div>
+<div>${lab("מחלקה")}<input name=v_dept_${i}></div>
+<div class=s2>${lab("שטיפומט",1)}${sel("v_shtifo_"+i,SH)}</div></div>`;
+$("#vehiclesList").appendChild(w);$("#addVehicle").style.display=vn>=10?"none":"inline-block";}
+function addD(){if(dn>=2)return;const i=dn++;const w=document.createElement("div");w.className="cb";w.innerHTML=`<h3>כרטיס נהג ${i+1}</h3><div class=g>
+<div>${lab("שם הנהג",1)}<input name=d_name_${i}></div>
+<div>${lab("ת.ז נהג",1)}<input name=d_id_${i}></div>
+<div class=s2>${lab("סוג דלק",1)}${sel("d_fuel_"+i,FA)}</div>
+<div>${lab("צריכה יומית")}<input name=d_day_${i}></div>
+<div>${lab("צריכה חודשית")}<input name=d_month_${i}></div></div>`;
+$("#driversList").appendChild(w);$("#addDriver").style.display=dn>=2?"none":"inline-block";}
+function ok(x,m){const e=$("#formError");if(!x){e.textContent=m||"יש למלא את שדות החובה";e.style.display="block";return false}e.style.display="none";return true}
+function validate(){const p=cur();if(p==="company")return ok(val("company")&&val("hp")&&val("address")&&val("email")&&val("phone"));
+if(p==="signers")return ok(val("sig1_name")&&val("sig1_id")&&val("sig1_addr"));
+if(p==="vehicle"){if(!vn)return ok(0);for(let i=0;i<vn;i++)if(!field("v_amtsei_"+i)||!field("v_plate_"+i)||!field("v_fuel_"+i)||!field("v_type_"+i)||!field("v_shtifo_"+i))return ok(0)}
+if(p==="driver"){if(!dn)return ok(0);for(let i=0;i<dn;i++)if(!field("d_name_"+i)||!field("d_id_"+i)||!field("d_fuel_"+i))return ok(0)}
+if(p==="master")return ok(val("master_qty"));if(p==="sono")return ok(radio("sono_fuel"));return true}
+function summary(){$("#summary").innerHTML=[`<b>${val("company")}</b> · ${val("hp")}`,val("address"),`${val("phone")} · ${val("email")}`,`דלקן: ${wants("vehicle")?vn+" רכבים":"לא"}`,`נהג: ${wants("driver")?dn+" כרטיסים":"לא"}`,`מאסטר: ${wants("master")?val("master_qty"):"לא"}`,`סונוקאש: ${wants("sono")?radio("sono_fuel")||"כן":"לא"}`].join("<br>")}
+function hid(f,id,v){if(v==null||v==="")return;const i=document.createElement("input");i.type="hidden";i.name="entry."+id;i.value=v;f.appendChild(i)}
+function submitG(){const f=$("#gform");f.innerHTML="";
+["company","hp","address","email","phone","mobile","fax","sig1_name","sig1_id","sig1_addr","sig2_name","sig2_id","sig2_addr"].forEach(k=>hid(f,E[k],val(k)));
+hid(f,E.want_vehicle,wants("vehicle")?"כן":"לא");hid(f,E.want_driver,wants("driver")?"כן":"לא");hid(f,E.want_master,wants("master")?"כן":"לא");hid(f,E.want_sono,wants("sono")?"כן":"לא");
+if(wants("vehicle")){for(let i=0;i<vn;i++){const id=VE[i];["v_amtsei_","v_plate_","v_phone_","v_fuel_","v_type_","v_day_","v_month_","v_model_","v_year_","v_driver_","v_dept_","v_shtifo_"].forEach((n,j)=>hid(f,id[j],field(n+i)));if(id[12])hid(f,id[12],i<vn-1?"כן, הוסף אמצעי תדלוק/רכב נוסף":"לא, המשך לשאלה הבאה")}}
+if(wants("driver")){for(let i=0;i<dn;i++){const id=E.drivers[i];hid(f,id.name,field("d_name_"+i));hid(f,id.id,field("d_id_"+i));hid(f,id.fuel,field("d_fuel_"+i));hid(f,id.day,field("d_day_"+i));hid(f,id.month,field("d_month_"+i));if(id.more)hid(f,id.more,i<dn-1?"כן, הזמן כרטיס נהג נוסף":"לא, המשך לשאלה הבאה")}}
+if(wants("master")){hid(f,E.master_qty,val("master_qty"));hid(f,E.master_day,val("master_day"));hid(f,E.master_month,val("master_month"))}
+if(wants("sono")){hid(f,E.sono_fuel,radio("sono_fuel"));["sono_100","sono_150","sono_200","sono_250","sono_500","sono_1000"].forEach((id,i)=>hid(f,E.sono_denoms[i],val(id)))}
+submitted=true;f.submit();setTimeout(showOk,900)}
+function showOk(){$("#wizard").style.display="none";$("#steps").style.display="none";document.querySelector(".h").style.display="none";$("#successMessage").style.display="block"}
+document.getElementById("hidden_iframe").addEventListener("load",()=>{if(submitted)showOk()});
+document.querySelectorAll("input[name=order_type]").forEach(el=>el.addEventListener("change",()=>{if(el.value==="vehicle"&&el.checked&&!vn)addV();if(el.value==="driver"&&el.checked&&!dn)addD();rebuild();render();}));
+$("#addVehicle").onclick=addV;$("#addDriver").onclick=addD;
+$("#prevBtn").onclick=()=>{step=Math.max(0,step-1);render()};
+$("#nextBtn").onclick=()=>{if(!validate())return;if(cur()==="choose")rebuild();if(cur()==="summary"){submitG();return}step++;if(cur()==="summary")summary();render()};
+render();
+</script></body></html>
