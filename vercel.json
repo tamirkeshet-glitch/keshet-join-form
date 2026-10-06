@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://join.keshet-g.com/", "permanent": true }
+  ]
+}
